@@ -1,0 +1,233 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap");
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background: #320d6d;
+  padding: 2em 4em;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+}
+
+header a {
+  color: #ed254e;
+  font-weight: bold;
+}
+
+h1 {
+  color: white;
+}
+
+p {
+  color: white;
+}
+
+.hero {
+  height: 70vh;
+  width: 100%;
+  padding: 4em 0;
+  display: flex;
+  flex-direction: column;
+}
+.hero h1 {
+  font-size: 24px;
+  margin-bottom: 1em;
+}
+.hero h1 span {
+  font-weight: 400;
+}
+
+.work {
+  width: 100%;
+}
+.work input[type=radio] {
+  display: none;
+}
+.work .card {
+  position: absolute;
+  width: 80%;
+  left: 0;
+  right: 0;
+  padding: 4em 2em;
+  margin: auto;
+  transition: transform 0.4s ease;
+  cursor: pointer;
+  background: white;
+  border-radius: 10px;
+}
+.work .card p {
+  padding: 0.5em 0;
+  color: #724e91;
+}
+.work .card .work-title {
+  padding: 0.5em 0;
+  font-weight: bold;
+}
+.work .card .work-desc {
+  padding: 0.25em 0;
+  font-size: 12px;
+}
+.work .card .work-tech {
+  padding: 0.25em 0;
+}
+.work .card .work-tech p {
+  padding: 0 0.5em;
+}
+.work .container {
+  width: 100%;
+  max-width: 800px;
+  transform-style: preserve-3d;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.work .cards {
+  position: relative;
+  width: 100%;
+  margin-bottom: 20px;
+}
+.work img {
+  width: 100%;
+  border-radius: 10px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.work #item-1:checked ~ .cards #song-3,
+.work #item-2:checked ~ .cards #song-1,
+.work #item-3:checked ~ .cards #song-2 {
+  transform: translatex(-40%) scale(0.8);
+  opacity: 0.4;
+  z-index: 0;
+}
+.work #item-1:checked ~ .cards #song-2,
+.work #item-2:checked ~ .cards #song-3,
+.work #item-3:checked ~ .cards #song-1 {
+  transform: translatex(40%) scale(0.8);
+  opacity: 0.4;
+  z-index: 0;
+}
+.work #item-1:checked ~ .cards #song-1,
+.work #item-2:checked ~ .cards #song-2,
+.work #item-3:checked ~ .cards #song-3 {
+  transform: translatex(0) scale(1);
+  opacity: 1;
+  z-index: 1;
+}
+.work #item-1:checked ~ .cards #song-1 img,
+.work #item-2:checked ~ .cards #song-2 img,
+.work #item-3:checked ~ .cards #song-3 img {
+  box-shadow: 0px 0px 5px 0px rgba(81, 81, 81, 0.47);
+}
+
+footer {
+  height: 20vh;
+  margin-top: 4em;
+  display: flex;
+  justify-content: space-between;
+}
+footer ul {
+  text-align: right;
+}
+footer ul a {
+  display: block;
+  padding: 0.25em 0;
+}
+
+section {
+  height: 100vh;
+  padding: 2em 0;
+}
+section h1 {
+  color: #ed254e;
+}
+
+.skill {
+  padding: 0.25em 0;
+  display: flex;
+}
+.skill p {
+  padding: 0 0.5em;
+}
+
+.about .about-container {
+  height: 80vh;
+}
+.about .about-container p {
+  padding: 1em 0;
+}
+.about .about-container p span {
+  font-weight: bold;
+}
+.about .about-container ul p {
+  padding: 0 0.5em;
+}
+.about .social-media {
+  display: flex;
+  justify-content: right;
+}
+
+.contact .contact-container {
+  padding: 2em 0;
+  color: white;
+}
+
+@media only screen and (min-width: 880px) {
+  .hero {
+    width: 100%;
+    padding: 4em 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .hero h1 {
+    margin: 5em 0;
+  }
+  .hero h1 span {
+    font-weight: 400;
+  }
+
+  .work {
+    width: 30%;
+  }
+  .work .card {
+    width: 60%;
+  }
+}
+@media only screen and (min-width: 1050px) {
+  h1 {
+    font-size: 24px;
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+  .work {
+    width: 35%;
+  }
+  .work .card {
+    width: 60%;
+  }
+}/*# sourceMappingURL=main.css.map */
