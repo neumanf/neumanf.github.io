@@ -58,6 +58,24 @@ p {
   font-weight: 400;
 }
 
+button {
+  display: flex;
+  align-items: center;
+  background-color: #ed254e;
+  color: white;
+  border: 0px;
+  border-radius: 5px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  padding: 0.25em 0.5em;
+}
+button .icon {
+  margin-right: 0.2em;
+}
+button:hover {
+  background-color: #f05071;
+}
+
 .work {
   width: 100%;
 }
@@ -66,13 +84,12 @@ p {
 }
 .work .card {
   position: absolute;
-  width: 80%;
+  width: 90%;
   left: 0;
   right: 0;
-  padding: 4em 2em;
+  padding: 3em 2em;
   margin: auto;
   transition: transform 0.4s ease;
-  cursor: pointer;
   background: white;
   border-radius: 10px;
 }
@@ -108,6 +125,12 @@ p {
   width: 100%;
   margin-bottom: 20px;
 }
+.work .cards .card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1em;
+}
 .work img {
   width: 100%;
   border-radius: 10px;
@@ -135,11 +158,6 @@ p {
   opacity: 1;
   z-index: 1;
 }
-.work #item-1:checked ~ .cards #song-1 img,
-.work #item-2:checked ~ .cards #song-2 img,
-.work #item-3:checked ~ .cards #song-3 img {
-  box-shadow: 0px 0px 5px 0px rgba(81, 81, 81, 0.47);
-}
 
 footer {
   height: 20vh;
@@ -166,6 +184,7 @@ section h1 {
 .skill {
   padding: 0.25em 0;
   display: flex;
+  align-items: center;
 }
 .skill p {
   padding: 0 0.5em;

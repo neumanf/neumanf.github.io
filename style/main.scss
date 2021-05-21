@@ -63,6 +63,26 @@ p {
     }
 }
 
+button {
+    display: flex;
+    align-items: center;
+    background-color: #ed254e;
+    color: white;
+    border: 0px;
+    border-radius: 5px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    padding: 0.25em 0.5em;
+
+    .icon {
+        margin-right: 0.2em;
+    }
+
+    &:hover {
+        background-color: #f05071;
+    }
+}
+
 .work {
     width: 100%;
 
@@ -72,13 +92,12 @@ p {
 
     .card {
         position: absolute;
-        width: 80%;
+        width: 90%;
         left: 0;
         right: 0;
-        padding: 4em 2em;
+        padding: 3em 2em;
         margin: auto;
         transition: transform 0.4s ease;
-        cursor: pointer;
         background: white;
         border-radius: 10px;
 
@@ -120,6 +139,13 @@ p {
         position: relative;
         width: 100%;
         margin-bottom: 20px;
+
+        .card-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 1em;
+        }
     }
 
     img {
@@ -150,10 +176,6 @@ p {
         transform: translatex(0) scale(1);
         opacity: 1;
         z-index: 1;
-
-        img {
-            box-shadow: 0px 0px 5px 0px rgba(81, 81, 81, 0.47);
-        }
     }
 }
 
@@ -184,6 +206,7 @@ section {
 .skill {
     padding: 0.25em 0;
     display: flex;
+    align-items: center;
 
     p {
         padding: 0 0.5em;
