@@ -13,7 +13,7 @@ body {
 }
 
 body {
-    background: #121013;
+    background-color: #121013;
     color: white;
     font-family: "Red Rose", Roboto;
 }
@@ -297,7 +297,7 @@ ul {
     }
 }
 
-@media screen and (max-width: 1280px) {
+@media screen and (max-width: 1600px) {
     .cards__wrapper {
         .card {
             width: 240px;
