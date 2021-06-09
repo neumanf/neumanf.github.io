@@ -14,6 +14,7 @@ body {
 
 body {
     background: #121013;
+    color: white;
     font-family: "Red Rose", Roboto;
 }
 
@@ -271,6 +272,52 @@ ul {
             }
             .card__image {
                 opacity: 0.8;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 1em 2em;
+
+        .content {
+            img {
+                height: 10rem;
+            }
+        }
+    }
+
+    .cards__wrapper {
+        .card {
+            width: 240px;
+            height: 300px;
+            margin: 3rem 5rem;
+        }
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    .cards__wrapper {
+        .card {
+            width: 240px;
+            height: 300px;
+            margin: 1rem 3rem;
+
+            &__text {
+                left: 25%;
+
+                &--inner {
+                    display: inline-block;
+                    color: #fff;
+                    font-size: 3rem;
+                    font-family: "Red Rose", Roboto;
+                    font-weight: 700;
+                    overflow: hidden;
+                    p {
+                        font-size: 8px;
+                    }
+                }
             }
         }
     }

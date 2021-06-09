@@ -13,6 +13,7 @@ body {
 
 body {
   background: #121013;
+  color: white;
   font-family: "Red Rose", Roboto;
 }
 
@@ -227,4 +228,40 @@ ul {
 }
 .cards__wrapper:hover > .card:not(:hover) .card__image {
   opacity: 0.8;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 1em 2em;
+  }
+  .container .content img {
+    height: 10rem;
+  }
+
+  .cards__wrapper .card {
+    width: 240px;
+    height: 300px;
+    margin: 3rem 5rem;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .cards__wrapper .card {
+    width: 240px;
+    height: 300px;
+    margin: 1rem 3rem;
+  }
+  .cards__wrapper .card__text {
+    left: 25%;
+  }
+  .cards__wrapper .card__text--inner {
+    display: inline-block;
+    color: #fff;
+    font-size: 3rem;
+    font-family: "Red Rose", Roboto;
+    font-weight: 700;
+    overflow: hidden;
+  }
+  .cards__wrapper .card__text--inner p {
+    font-size: 8px;
+  }
 }/*# sourceMappingURL=main.css.map */
