@@ -63,20 +63,26 @@ ul {
   flex-direction: column;
   justify-content: space-evenly;
 }
-.container .about__skills {
-  margin: 0 2em;
-  width: 100%;
-}
-.container .about__skills .skill {
-  display: flex;
-  margin: 1em 0;
-}
-.container .about__skills .skill p {
-  margin: 0 0.5em;
-}
 .container .about__social {
   display: flex;
   justify-content: end;
+}
+
+.stack {
+  margin: 1em 0;
+}
+.stack ul {
+  margin: 0.5em 0;
+}
+.stack ul a {
+  display: flex;
+  align-items: center;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.stack ul a p {
+  margin: 0.5em 0.75em;
 }
 
 .header {

@@ -74,23 +74,41 @@ ul {
         //     flex-basis: 50%;
         // }
 
-        &__skills {
-            margin: 0 2em;
-            width: 100%;
+        // &__skills {
+        //     margin: 0 2em;
+        //     width: 100%;
 
-            .skill {
-                display: flex;
-                margin: 1em 0;
+        //     .skill {
+        //         display: flex;
+        //         margin: 1em 0;
 
-                p {
-                    margin: 0 0.5em;
-                }
-            }
-        }
+        //         p {
+        //             margin: 0 0.5em;
+        //         }
+        //     }
+        // }
 
         &__social {
             display: flex;
             justify-content: end;
+        }
+    }
+}
+
+.stack {
+    margin: 1em 0;
+
+    ul {
+        margin: 0.5em 0;
+
+        a {
+            display: flex;
+            align-items: center;
+            width: fit-content;
+
+            p {
+                margin: 0.5em 0.75em;
+            }
         }
     }
 }
