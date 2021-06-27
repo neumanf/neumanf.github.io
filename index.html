@@ -28,7 +28,7 @@
             </div>
 
             <div class="hero">
-                <h1>
+                <h1 class="animate">
                     COMPUTER ENGINEERING<br \ /><span>STUDENT & DEVELOPER</span>
                 </h1>
             </div>
@@ -111,33 +111,9 @@
             </section>
         </div>
     </body>
+    <script src="js/animations/general.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
     <script src="https://unpkg.com/splitting/dist/splitting.min.js"></script>
     <script src="https://code.iconify.design/1/1.0.6/iconify.min.js"></script>
-    <script>
-        Splitting();
-
-        gsap.set(".cards__wrapper", { autoAlpha: 1 });
-
-        gsap.timeline({
-            defaults: {
-                duration: 1.25,
-                stagger: 0.125,
-                ease: "expo.inOut",
-            },
-        })
-            .fromTo(
-                ".card__image--wrapper",
-                { yPercent: 110 },
-                { yPercent: 0 },
-                0
-            )
-            .fromTo(
-                ".card__image--outer",
-                { yPercent: -110 },
-                { yPercent: 0 },
-                0
-            )
-            .set(".cards__wrapper, .card", { pointerEvents: "all" }, "-=1");
-    </script>
+    <script src="js/animations/homepage.js"></script>
 </html>
