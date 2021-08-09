@@ -68,6 +68,21 @@ ul {
   justify-content: end;
 }
 
+.skill {
+  display: flex;
+  width: 12em;
+  margin-top: 0.5em;
+}
+.skill__icon {
+  display: flex;
+  flex: 30%;
+  justify-content: center;
+}
+.skill__text {
+  flex: 70%;
+  align-items: center;
+}
+
 .stack {
   margin: 1em 0;
 }

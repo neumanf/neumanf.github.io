@@ -95,6 +95,23 @@ ul {
     }
 }
 
+.skill {
+    display: flex;
+    width: 12em;
+    margin-top: 0.5em;
+
+    &__icon {
+        display: flex;
+        flex: 30%;
+        justify-content: center;
+    }
+
+    &__text {
+        flex: 70%;
+        align-items: center;
+    }
+}
+
 .stack {
     margin: 1em 0;
 
