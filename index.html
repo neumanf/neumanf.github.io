@@ -1,83 +1,190 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Neuman F.</title>
-        <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
-        <link rel="stylesheet" href="/style/main.css" />
-    </head>
-    <body>
-        <div class="container">
-            <div class="header">
-                <a href="/index.html"><h3>NF</h3></a>
-                <nav>
-                    <a href="#about"> About </a>
-                    <a href="#projects"> Projects </a>
-                    <a class="border-btn" href=""> Contact me </a>
-                </nav>
-            </div>
 
-            <div class="hero">
-                <div class="hero__left">
-                    <h1>
-                        <span>Full-Stack Developer</span> &<br \ />Computer Eng.
-                        Student
-                    </h1>
-                    <div class="cta-btn">
-                        <a href="#projects">Browse Projects</a>
-                    </div>
-                </div>
-                <div class="hero__right">
-                    <img src="images/hero_img.png" alt="" srcset="" />
-                </div>
-                <div class="contact-icons">
-                    <a href="https://github.com/neumanf" class="icon">
-                        <span
-                            class="iconify"
-                            data-icon="akar-icons:github-fill"
-                            style="color: black; font-size: 24px"
-                        ></span>
-                    </a>
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Neuman F.</title>
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="stylesheet" href="/style/main.css" />
+</head>
 
-                    <a href="#" class="icon">
-                        <span
-                            class="iconify"
-                            data-icon="ic:round-email"
-                            style="color: black; font-size: 24px"
-                        ></span>
-                    </a>
+<body>
+    <div class="container">
+        <div class="header">
+            <a href="/index.html">
+                <h3>NF</h3>
+            </a>
+            <nav>
+                <a href="#about"> About </a>
+                <a href="#projects"> Projects </a>
+                <a class="border-btn" href=""> Contact me </a>
+            </nav>
+        </div>
+
+        <div class="hero">
+            <div class="hero__left">
+                <h1>
+                    <span>Full-Stack Developer</span> &<br \ />Computer Eng.
+                    Student
+                </h1>
+                <div class="cta-btn">
+                    <a href="#projects">Browse Projects</a>
                 </div>
             </div>
+            <div class="hero__right">
+                <img src="images/hero_img.png" alt="" srcset="" />
+            </div>
+            <div class="contact-icons">
+                <a href="https://github.com/neumanf" class="icon">
+                    <span class="iconify" data-icon="akar-icons:github-fill"
+                        style="color: black; font-size: 24px"></span>
+                </a>
 
-            <div id="about" class="about">
-                <div class="about__left">
-                    <span
-                        class="iconify"
-                        data-icon="fa-solid:laptop-code"
-                        style="color: #e83151; font-size: 10em"
-                    ></span>
+                <a href="#" class="icon">
+                    <span class="iconify" data-icon="ic:round-email" style="color: black; font-size: 24px"></span>
+                </a>
+            </div>
+        </div>
+
+        <div id="about" class="about">
+            <div class="about__left">
+                <span class="iconify" data-icon="fa-solid:laptop-code" style="color: #e83151; font-size: 10em"></span>
+            </div>
+
+            <div class="about__right">
+                <div class="title">
+                    Who am I
+                    <div class="title__decoration"></div>
                 </div>
 
-                <div class="about__right">
-                    <div class="title">
-                        Who am I
-                        <div class="title__decoration"></div>
-                    </div>
-
-                    <div class="description">
-                        I am a Software Developer based in Brazil. I specialise
-                        in Back-End development, and I’m currently working as a
-                        Full-Stack Developer on an scientic research.
-                        <br /><br />I’m always striving to grow and learn
-                        something new. In my free time, I enjoy working on my
-                        personal projects, as well as freelancing. My favorite
-                        programming languages are Typescript and C#.
-                    </div>
+                <div class="description">
+                    I am a Software Developer based in Brazil. I specialise
+                    in Back-End development, and I’m currently working as a
+                    Full-Stack Developer on an scientic research.
+                    <br /><br />I’m always striving to grow and learn
+                    something new. In my free time, I enjoy working on my
+                    personal projects, as well as freelancing. My favorite
+                    programming languages are Typescript and C#.
                 </div>
             </div>
         </div>
-    </body>
-    <script src="https://code.iconify.design/2/2.1.0/iconify.min.js"></script>
+
+        <div id="projects" class="projects">
+            <div class="title">
+                Projects
+                <div class="title__decoration"></div>
+            </div>
+
+            <div class="project_card">
+                <div class="project_card__image">
+                    <img src="images/unboreme.png" alt="fragmentails homepage">
+                </div>
+                <div class="project_card__title">
+                    Unboreme
+                </div>
+                <div class="project_card__tags">
+                    <div class="project_card__tags__tag">
+                        TypeScript
+                    </div>
+                    <div class="project_card__tags__tag">
+                        AdonisJS
+                    </div>
+                    <div class="project_card__tags__tag">
+                        TailwindCSS
+                    </div>
+                </div>
+                <div class="project_card__description">
+                    Movies and TV series recommendation website. Choose between one or more categories and it will
+                    recommend you something to watch based on that.
+                </div>
+                <div class="project_card__info">
+                    <a href="https://unboreme.herokuapp.com" class="project_card__info__preview">
+                        <span class="iconify" data-icon="ant-design:eye-filled"
+                            style="font-size: 24px; margin-right: 0.25em;"></span>
+                        Preview
+                    </a>
+                    <a href="https://github.com/neumanf/unboreme" class="project_card__info__source">
+                        <span class="iconify" data-icon="akar-icons:github-fill"
+                            style="color: black; font-size: 24px; margin-right: 0.25em;"></span>
+                        Source code
+                    </a>
+                </div>
+            </div>
+
+            <div class="project_card">
+                <div class="project_card__image">
+                    <img src="images/fragmentails.png" alt="fragmentails homepage">
+                </div>
+                <div class="project_card__title">
+                    Fragmentails
+                </div>
+                <div class="project_card__tags">
+                    <div class="project_card__tags__tag">
+                        TypeScript
+                    </div>
+                    <div class="project_card__tags__tag">
+                        Svelte
+                    </div>
+                    <div class="project_card__tags__tag">
+                        TailwindCSS
+                    </div>
+                </div>
+                <div class="project_card__description">
+                    A collection of responsive ready-to-use TailwindCSS components.
+                </div>
+                <div class="project_card__info">
+                    <a href="https://fragmentails.vercel.app" class="project_card__info__preview">
+                        <span class="iconify" data-icon="ant-design:eye-filled"
+                            style="font-size: 24px; margin-right: 0.25em;"></span>
+                        Preview
+                    </a>
+                    <a href="https://github.com/neumanf/fragmentails" class="project_card__info__source">
+                        <span class="iconify" data-icon="akar-icons:github-fill"
+                            style="color: black; font-size: 24px; margin-right: 0.25em;"></span>
+                        Source code
+                    </a>
+                </div>
+            </div>
+
+            <div class="project_card">
+                <div class="project_card__image">
+                    <img src="https://via.placeholder.com/400x200" alt="">
+                </div>
+                <div class="project_card__title">
+                    Clean Ecommerce
+                </div>
+                <div class="project_card__tags">
+                    <div class="project_card__tags__tag">
+                        TypeScript
+                    </div>
+                    <div class="project_card__tags__tag">
+                        React
+                    </div>
+                    <div class="project_card__tags__tag">
+                        Express
+                    </div>
+                </div>
+                <div class="project_card__description">
+                    Ecommerce-like website using Domain Driven Design and Clean Architecture concepts on the backend.
+                </div>
+                <div class="project_card__info">
+                    <a href="#" class="project_card__info__preview">
+                        <span class="iconify" data-icon="ant-design:eye-filled"
+                            style="font-size: 24px; margin-right: 0.25em;"></span>
+                        Preview
+                    </a>
+                    <a href="https://github.com/neumanf/clean-ecommerce" class="project_card__info__source">
+                        <span class="iconify" data-icon="akar-icons:github-fill"
+                            style="color: black; font-size: 24px; margin-right: 0.25em;"></span>
+                        Source code
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="https://code.iconify.design/2/2.1.0/iconify.min.js"></script>
+
 </html>
