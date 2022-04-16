@@ -83,10 +83,6 @@ const useStyles = createStyles((theme) => ({
 
   linkActive: {
     "&, &:hover": {
-      backgroundColor:
-        theme.colorScheme === "dark"
-          ? theme.fn.rgba(theme.colors[theme.primaryColor][9], 0.25)
-          : theme.colors[theme.primaryColor][0],
       color:
         theme.colors[theme.primaryColor][theme.colorScheme === "dark" ? 3 : 7],
     },
@@ -117,7 +113,9 @@ export function Navbar({ links }) {
   return (
     <Header height={HEADER_HEIGHT} mb={120} className={classes.root}>
       <Container className={classes.header}>
-        <Text>NF</Text>
+        <Text weight="900" size="xl">
+          NF
+        </Text>
         <Group spacing={5} className={classes.links}>
           {items}
         </Group>

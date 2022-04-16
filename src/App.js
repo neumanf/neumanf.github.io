@@ -1,3 +1,4 @@
+import { MantineProvider } from "@mantine/styles";
 import { Navbar } from "./components/Navbar";
 
 const navBarLinks = [
@@ -15,14 +16,19 @@ const navBarLinks = [
   },
   {
     link: "/#contact",
-    label: "Contact me",
+    label: "Contact",
   },
 ];
 
 export default function App() {
   return (
-    <>
+    <MantineProvider
+      theme={{
+        primaryColor: "red",
+        fontFamily: "Nunito, sans-serif",
+      }}
+    >
       <Navbar links={navBarLinks} />
-    </>
+    </MantineProvider>
   );
 }
