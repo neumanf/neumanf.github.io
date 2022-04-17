@@ -1,5 +1,7 @@
 import { MantineProvider } from "@mantine/styles";
+
 import { Navbar } from "./components/Navbar";
+import Home from "./routes/Home";
 
 const navBarLinks = [
   {
@@ -29,6 +31,7 @@ export default function App() {
       }}
     >
       <Navbar links={navBarLinks} />
+      <Home />
     </MantineProvider>
   );
 }
