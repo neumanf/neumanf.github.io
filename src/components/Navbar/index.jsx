@@ -113,7 +113,7 @@ export function Navbar({ links }) {
   return (
     <Header height={HEADER_HEIGHT} mb={60} className={classes.root}>
       <Container className={classes.header}>
-        <Text weight="900" size="xl">
+        <Text component="a" href="/" weight="900" size="xl">
           NF
         </Text>
         <Group spacing={5} className={classes.links}>
