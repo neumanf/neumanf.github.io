@@ -5,7 +5,7 @@ import { ProjectCard } from "./components/ProjectCard";
 export default function Projects() {
   return (
     <Grid>
-      <Grid.Col span={4}>
+      <Grid.Col md={4} lg={4}>
         <ProjectCard
           image="/assets/images/pdi.png"
           title="PDI"
@@ -15,7 +15,7 @@ export default function Projects() {
           sourceLink="https://github.com/neumanf/pdi"
         />
       </Grid.Col>
-      <Grid.Col span={4}>
+      <Grid.Col md={4} lg={4}>
         <ProjectCard
           image="/assets/images/unboreme.png"
           title="Unboreme"
@@ -25,7 +25,7 @@ export default function Projects() {
           sourceLink="https://github.com/neumanf/unboreme"
         />
       </Grid.Col>
-      <Grid.Col span={4}>
+      <Grid.Col md={4} lg={4}>
         <ProjectCard
           image={null}
           title="[WIP] Clean Ecommerce"
@@ -34,7 +34,7 @@ export default function Projects() {
           sourceLink="https://github.com/neumanf/clean-ecommerce"
         />
       </Grid.Col>
-      <Grid.Col span={4}>
+      <Grid.Col md={4} lg={4}>
         <ProjectCard
           image={null}
           title="[WIP] Mnimy"
