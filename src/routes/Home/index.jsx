@@ -1,6 +1,7 @@
 import { Button, Group, Image, Stack, Text } from "@mantine/core";
 import { useMediaQuery } from "@mantine/hooks";
 import { createStyles } from "@mantine/styles";
+import { Link } from "react-router-dom";
 import { BrandGithub, Mail } from "tabler-icons-react";
 
 const useStyles = createStyles(() => ({
@@ -41,7 +42,7 @@ export default function Home() {
             </Text>{" "}
             & Computer Eng. Student
           </Text>
-          <Button component="a" href="/projects">
+          <Button component={Link} to="/projects">
             Browse projects
           </Button>
         </Stack>
