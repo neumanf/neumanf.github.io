@@ -1,7 +1,7 @@
+import { Container } from "@mantine/core";
 import { MantineProvider } from "@mantine/styles";
 
 import { Navbar } from "./components/Navbar";
-import Home from "./routes/Home";
 
 const navBarLinks = [
   {
@@ -9,20 +9,20 @@ const navBarLinks = [
     label: "Home",
   },
   {
-    link: "/#about",
+    link: "/about",
     label: "About",
   },
   {
-    link: "/#projects",
+    link: "/projects",
     label: "Projects",
   },
   {
-    link: "/#contact",
+    link: "/contact",
     label: "Contact",
   },
 ];
 
-export default function App() {
+export default function App({ child }) {
   return (
     <MantineProvider
       theme={{
@@ -31,7 +31,7 @@ export default function App() {
       }}
     >
       <Navbar links={navBarLinks} />
-      <Home />
+      <Container>{child}</Container>
     </MantineProvider>
   );
 }
