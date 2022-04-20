@@ -31,7 +31,7 @@ export default function App({ child }) {
       }}
     >
       <Navbar links={navBarLinks} />
-      <Container>{child}</Container>
+      <Container py="xl">{child}</Container>
     </MantineProvider>
   );
 }

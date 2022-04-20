@@ -56,17 +56,17 @@ const useStyles = createStyles((theme) => ({
   },
 
   link: {
-    display: "block",
-    lineHeight: 1,
-    padding: "8px 12px",
-    borderRadius: theme.radius.sm,
-    textDecoration: "none",
-    color:
+    "display": "block",
+    "lineHeight": 1,
+    "padding": "8px 12px",
+    "borderRadius": theme.radius.sm,
+    "textDecoration": "none",
+    "color":
       theme.colorScheme === "dark"
         ? theme.colors.dark[0]
         : theme.colors.gray[7],
-    fontSize: theme.fontSizes.sm,
-    fontWeight: 500,
+    "fontSize": theme.fontSizes.sm,
+    "fontWeight": 500,
 
     "&:hover": {
       backgroundColor:
@@ -111,7 +111,7 @@ export function Navbar({ links }) {
   ));
 
   return (
-    <Header height={HEADER_HEIGHT} mb={60} className={classes.root}>
+    <Header height={HEADER_HEIGHT} className={classes.root}>
       <Container className={classes.header}>
         <Text component={Link} to="/" weight="900" size="xl">
           NF
