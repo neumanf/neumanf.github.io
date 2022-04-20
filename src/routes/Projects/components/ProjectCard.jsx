@@ -75,8 +75,9 @@ export function ProjectCard({
 
       <Group mt="xs">
         <Button
+          disabled={liveLink === undefined}
           leftIcon={<Eye size={18} />}
-          component="a"
+          component={liveLink ? "a" : null}
           href={liveLink}
           radius="md"
           style={{ flex: 1 }}
