@@ -1,12 +1,21 @@
-import { Button, Group, Image, Stack, Text } from "@mantine/core";
+import { Button, Group, Image, Stack, Text, keyframes } from "@mantine/core";
 import { useMediaQuery } from "@mantine/hooks";
 import { createStyles } from "@mantine/styles";
 import { Link } from "react-router-dom";
 import { BrandGithub, Mail } from "tabler-icons-react";
 
+const floating = keyframes({
+  "0%": { transform: "translate(0,  0px)" },
+  "50%": { transform: "translate(0, 20px)" },
+  "100%": { transform: "translate(0, -0px)" },
+});
+
 const useStyles = createStyles(() => ({
   heroTitle: {
     fontSize: 36,
+  },
+  floating: {
+    animation: `${floating} 3s ease-in-out infinite`,
   },
 }));
 
@@ -46,11 +55,13 @@ export default function Home() {
             Browse projects
           </Button>
         </Stack>
-        <Image
-          width={400}
-          src="/assets/images/hero.png"
-          alt="Boy with laptop"
-        />
+        <div className={classes.floating}>
+          <Image
+            width={400}
+            src="/assets/images/hero.png"
+            alt="Boy with laptop"
+          />
+        </div>
         {isDesktop ? (
           <Stack>{getSocialMedia()}</Stack>
         ) : (
