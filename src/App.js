@@ -27,7 +27,7 @@ export default function App({ child }) {
     <MantineProvider
       theme={{
         primaryColor: "red",
-        fontFamily: "Nunito, sans-serif",
+        fontFamily: "Inter, sans-serif",
       }}
     >
       <Navbar links={navBarLinks} />
