@@ -7,12 +7,12 @@ export default function Projects() {
     <Grid>
       <Grid.Col md={4} lg={4}>
         <ProjectCard
-          image="/assets/images/pdi.png"
-          title="PDI"
-          description="Blog including projects from Digital Image Processing classes."
-          badges={["C++", "OpenCV"]}
-          liveLink="https://neumanf.github.io/pdi"
-          sourceLink="https://github.com/neumanf/pdi"
+          image="/assets/images/image-deblur-tool.png"
+          title="Image Deblur Tool"
+          description="Application capable of restoring blurred images."
+          badges={["React", "Python", "OpenCV"]}
+          liveLink="https://image-deblur-tool.vercel.app"
+          sourceLink="https://github.com/neumanf/image-deblur-tool"
         />
       </Grid.Col>
       <Grid.Col md={4} lg={4}>
@@ -32,6 +32,16 @@ export default function Projects() {
           description="Ecommerce-like website using Domain Driven Design and Clean Architecture concepts on Backend. You should be able to list, filter and order products."
           badges={["TypeScript", "React", "Express"]}
           sourceLink="https://github.com/neumanf/clean-ecommerce"
+        />
+      </Grid.Col>
+      <Grid.Col md={4} lg={4}>
+        <ProjectCard
+          image="/assets/images/pdi.png"
+          title="PDI"
+          description="Blog including projects from Digital Image Processing classes."
+          badges={["C++", "OpenCV"]}
+          liveLink="https://neumanf.github.io/pdi"
+          sourceLink="https://github.com/neumanf/pdi"
         />
       </Grid.Col>
       <Grid.Col md={4} lg={4}>
