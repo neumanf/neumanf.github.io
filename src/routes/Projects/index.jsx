@@ -19,7 +19,7 @@ export default function Projects() {
           image="/assets/images/image-deblur-tool.png"
           title="Image Deblur Tool"
           description="Application capable of restoring blurred images."
-          badges={["React", "Python", "OpenCV"]}
+          badges={["OpenCV", "Python", "FastAPI", "React"]}
           liveLink="https://image-deblur-tool.vercel.app"
           sourceLink="https://github.com/neumanf/image-deblur-tool"
         />
