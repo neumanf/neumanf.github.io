@@ -7,6 +7,15 @@ export default function Projects() {
     <Grid>
       <Grid.Col md={4} lg={4}>
         <ProjectCard
+          image={"/assets/images/clean-ecommerce.png"}
+          title="Clean E-commerce"
+          description="E-commerce/E-shop website capable of list, filter and order products, as well as notify users when a product is unavailable."
+          badges={["TypeScript", "React", "NextJS", "NestJS", "PostgreSQL"]}
+          sourceLink="https://github.com/neumanf/clean-ecommerce"
+        />
+      </Grid.Col>
+      <Grid.Col md={4} lg={4}>
+        <ProjectCard
           image="/assets/images/image-deblur-tool.png"
           title="Image Deblur Tool"
           description="Application capable of restoring blurred images."
@@ -23,15 +32,6 @@ export default function Projects() {
           badges={["TypeScript", "Svelte", "AdonisJS", "TailwindCSS"]}
           liveLink="https://unboreme.herokuapp.com/"
           sourceLink="https://github.com/neumanf/unboreme"
-        />
-      </Grid.Col>
-      <Grid.Col md={4} lg={4}>
-        <ProjectCard
-          image={null}
-          title="[WIP] Clean Ecommerce"
-          description="Ecommerce-like website using Domain Driven Design and Clean Architecture concepts on Backend. You should be able to list, filter and order products."
-          badges={["TypeScript", "React", "Express"]}
-          sourceLink="https://github.com/neumanf/clean-ecommerce"
         />
       </Grid.Col>
       <Grid.Col md={4} lg={4}>
