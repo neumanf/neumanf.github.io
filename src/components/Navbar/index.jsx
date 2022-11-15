@@ -94,21 +94,33 @@ export function Navbar({ links }) {
   const [active, setActive] = useState(links[0].link);
   const { classes, cx } = useStyles();
 
-  const items = links.map((link) => (
-    <Link
-      key={link.label}
-      to={link.link}
-      className={cx(classes.link, {
-        [classes.linkActive]: active === link.link,
-      })}
-      onClick={() => {
-        setActive(link.link);
-        toggleOpened(false);
-      }}
-    >
-      {link.label}
-    </Link>
-  ));
+  const items = links.map((link) =>
+    link.isExternal ? (
+      <a
+        key={link.label}
+        href={link.link}
+        className={cx(classes.link, {
+          [classes.linkActive]: active === link.link,
+        })}
+      >
+        {link.label}
+      </a>
+    ) : (
+      <Link
+        key={link.label}
+        to={link.link}
+        className={cx(classes.link, {
+          [classes.linkActive]: active === link.link,
+        })}
+        onClick={() => {
+          setActive(link.link);
+          toggleOpened(false);
+        }}
+      >
+        {link.label}
+      </Link>
+    )
+  );
 
   return (
     <Header height={HEADER_HEIGHT} className={classes.root}>

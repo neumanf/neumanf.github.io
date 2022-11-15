@@ -12,6 +12,11 @@ const navBarLinks = [
     link: "/projects",
     label: "Projects",
   },
+  {
+    link: "https://neumanf.github.io/blog",
+    label: "Blog",
+    isExternal: true,
+  },
 ];
 
 export default function App({ child }) {
