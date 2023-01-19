@@ -7,6 +7,26 @@ export default function Projects() {
     <Grid>
       <Grid.Col md={4} lg={4}>
         <ProjectCard
+          image={"/assets/images/mally.png"}
+          title="Mally"
+          description="A collection of web services such as URL shorteners, pastebins, and many more."
+          badges={["TypeScript", "React", "NextJS", "NestJS", "MySQL"]}
+          liveLink="https://mally.vercel.app"
+          sourceLink="https://github.com/neumanf/mally"
+        />
+      </Grid.Col>
+      <Grid.Col md={4} lg={4}>
+        <ProjectCard
+          image={"/assets/images/vagastechrnbot.png"}
+          title="Vagas Tech RN Bot"
+          description="Manages the Vagas Tech RN channel on Telegram."
+          badges={["TypeScript", "Express", "grammY", "MySQL"]}
+          liveLink="https://t.me/s/vagastechrn"
+          sourceLink="https://github.com/neumanf/vagastechrnbot"
+        />
+      </Grid.Col>
+      <Grid.Col md={4} lg={4}>
+        <ProjectCard
           image={"/assets/images/clean-ecommerce.png"}
           title="Clean E-commerce"
           description="E-commerce/E-shop website capable of list, filter and order products, as well as notify users when a product is unavailable."
