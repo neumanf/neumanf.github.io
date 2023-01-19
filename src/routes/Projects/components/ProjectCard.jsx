@@ -8,7 +8,7 @@ import {
   Badge,
   Button,
   createStyles,
-  useMantineTheme,
+  useMantineTheme, Container,
 } from "@mantine/core";
 
 const useStyles = createStyles((theme) => ({
@@ -40,6 +40,7 @@ export function ProjectCard({
   badges,
   liveLink,
   sourceLink,
+  projectPageLink
 }) {
   const { classes } = useStyles();
   const theme = useMantineTheme();
@@ -71,6 +72,10 @@ export function ProjectCard({
         <Text size="sm" mt="xs">
           {description}
         </Text>
+        <Container py={5} />
+        {projectPageLink && <Text component="a" href={projectPageLink} color="red" size="sm" mt="xs">
+          Read more
+        </Text>}
       </Card.Section>
 
       <Group mt="xs">

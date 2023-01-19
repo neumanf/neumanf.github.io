@@ -8,6 +8,8 @@ import reportWebVitals from "./reportWebVitals";
 import App from "./App";
 import Projects from "./routes/Projects";
 import Home from "./routes/Home";
+import ProjectPage from "./routes/Projects/project";
+import { projectsInfo } from "./routes/Projects/projectsInfo";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -16,6 +18,23 @@ root.render(
       <Routes>
         <Route path="/" element={<App child={<Home />} />}></Route>
         <Route path="/projects" element={<App child={<Projects />} />}></Route>
+        {projectsInfo.map((project) => (
+          <Route
+            key={project.pageLink}
+            path={project.pageLink}
+            element={
+              <App
+                child={
+                  <ProjectPage
+                    title={project.title}
+                    description={project.description}
+                    screenshots={project.screenshots}
+                  />
+                }
+              />
+            }
+          />
+        ))}
       </Routes>
     </HashRouter>
   </React.StrictMode>
