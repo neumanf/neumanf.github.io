@@ -22,17 +22,7 @@ root.render(
           <Route
             key={project.pageLink}
             path={project.pageLink}
-            element={
-              <App
-                child={
-                  <ProjectPage
-                    title={project.title}
-                    description={project.description}
-                    screenshots={project.screenshots}
-                  />
-                }
-              />
-            }
+            element={<App child={<ProjectPage project={project} />} />}
           />
         ))}
       </Routes>

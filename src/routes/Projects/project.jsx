@@ -1,13 +1,48 @@
 import React from "react";
-import { Container, Text, Title, Image, Card } from "@mantine/core";
+import {
+  Container,
+  Text,
+  Title,
+  Image,
+  Card,
+  Group,
+  ActionIcon,
+  List,
+} from "@mantine/core";
+import { BrandGithub, Eye } from "tabler-icons-react";
 
-export default function ProjectPage({ title, description, screenshots }) {
+export default function ProjectPage({
+  project: { title, description, features, screenshots, liveLink, sourceLink },
+}) {
   return (
     <>
-      <Title>{title}</Title>
+      <Group position="apart">
+        <Title>{title}</Title>
+        <Group>
+          <ActionIcon component="a" color="red" href={liveLink}>
+            <Eye />
+          </ActionIcon>
+          <ActionIcon component="a" color="red" href={sourceLink}>
+            <BrandGithub />
+          </ActionIcon>
+        </Group>
+      </Group>
       <Container py={3} />
       {description && <Text>{description}</Text>}
       <Container py={10} />
+      {features && (
+        <>
+          <Text size="xl" weight="bold" py={5}>
+            Features
+          </Text>
+          <List>
+            {features.map((feature, i) => (
+              <List.Item key={i}>{feature}</List.Item>
+            ))}
+          </List>
+          <Container py={10} />
+        </>
+      )}
       {screenshots && (
         <>
           <Text size="xl" weight="bold">

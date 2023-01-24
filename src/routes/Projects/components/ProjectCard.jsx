@@ -8,7 +8,9 @@ import {
   Badge,
   Button,
   createStyles,
-  useMantineTheme, Container,
+  useMantineTheme,
+  Container,
+  ScrollArea,
 } from "@mantine/core";
 
 const useStyles = createStyles((theme) => ({
@@ -40,7 +42,7 @@ export function ProjectCard({
   badges,
   liveLink,
   sourceLink,
-  projectPageLink
+  projectPageLink,
 }) {
   const { classes } = useStyles();
   const theme = useMantineTheme();
@@ -66,16 +68,26 @@ export function ProjectCard({
         <Text size="lg" weight={600}>
           {title}
         </Text>
-        <Group spacing={7} mt={5}>
-          {features}
-        </Group>
-        <Text size="sm" mt="xs">
+        <ScrollArea style={{ width: 300, height: 30 }}>
+          <Group spacing={7} mt={5} style={{ width: 500 }}>
+            {features}
+          </Group>
+        </ScrollArea>
+        <Text size="sm" mt="xs" lineClamp={2}>
           {description}
         </Text>
         <Container py={5} />
-        {projectPageLink && <Text component="a" href={projectPageLink} color="red" size="sm" mt="xs">
-          Read more
-        </Text>}
+        {projectPageLink && (
+          <Text
+            component="a"
+            href={projectPageLink}
+            color="red"
+            size="sm"
+            mt="xs"
+          >
+            Read more
+          </Text>
+        )}
       </Card.Section>
 
       <Group mt="xs">

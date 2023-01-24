@@ -4,7 +4,13 @@ export const projectsInfo = [
     description:
       "A collection of web services such as URL shorteners, pastebins, and many more.",
     badges: ["TypeScript", "React", "NextJS", "NestJS", "MySQL"],
-    liveLink: "https://mally.vercel.app",
+    features: [
+      "URL Shortener and Pastebin services",
+      "Authentication with JWT",
+      "User dashboard",
+      "CI/CD",
+    ],
+    liveLink: "https://mally.neumanf.com",
     sourceLink: "https://github.com/neumanf/mally",
     pageLink: "/projects/mally",
     screenshots: [
@@ -19,6 +25,10 @@ export const projectsInfo = [
       {
         link: "/assets/images/mally_pastebin.png",
         caption: "Pastebin",
+      },
+      {
+        link: "/assets/images/mally_dashboard.png",
+        caption: "Dashboard",
       },
     ],
   },
@@ -52,7 +62,7 @@ export const projectsInfo = [
   },
   {
     title: "Image Deblur Tool",
-    description: "Restores blurred images.",
+    description: "Restores blurred images using the Wiener filter.",
     badges: ["OpenCV", "Python", "FastAPI", "React"],
     liveLink: "https://image-deblur-tool.vercel.app",
     sourceLink: "https://github.com/neumanf/image-deblur-tool",
