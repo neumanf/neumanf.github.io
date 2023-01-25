@@ -8,6 +8,7 @@ import {
   Group,
   ActionIcon,
   List,
+  Tooltip,
 } from "@mantine/core";
 import { BrandGithub, Eye } from "tabler-icons-react";
 
@@ -19,12 +20,16 @@ export default function ProjectPage({
       <Group position="apart">
         <Title>{title}</Title>
         <Group>
-          <ActionIcon component="a" color="red" href={liveLink}>
-            <Eye />
-          </ActionIcon>
-          <ActionIcon component="a" color="red" href={sourceLink}>
-            <BrandGithub />
-          </ActionIcon>
+          <Tooltip label="See live">
+            <ActionIcon component="a" color="red" href={liveLink}>
+              <Eye />
+            </ActionIcon>
+          </Tooltip>
+          <Tooltip label="Source code">
+            <ActionIcon component="a" color="red" href={sourceLink}>
+              <BrandGithub />
+            </ActionIcon>
+          </Tooltip>
         </Group>
       </Group>
       <Container py={3} />

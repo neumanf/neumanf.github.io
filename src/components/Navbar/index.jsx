@@ -9,7 +9,7 @@ import {
   Transition,
   Text,
 } from "@mantine/core";
-import { useBooleanToggle } from "@mantine/hooks";
+import { useDisclosure } from "@mantine/hooks";
 import { Link } from "react-router-dom";
 
 const HEADER_HEIGHT = 60;
@@ -90,7 +90,7 @@ const useStyles = createStyles((theme) => ({
 }));
 
 export function Navbar({ links }) {
-  const [opened, toggleOpened] = useBooleanToggle(false);
+  const [opened, { toggle, close }] = useDisclosure(false);
   const [active, setActive] = useState(links[0].link);
   const { classes, cx } = useStyles();
 
@@ -114,7 +114,7 @@ export function Navbar({ links }) {
         })}
         onClick={() => {
           setActive(link.link);
-          toggleOpened(false);
+          close();
         }}
       >
         {link.label}
@@ -134,7 +134,7 @@ export function Navbar({ links }) {
 
         <Burger
           opened={opened}
-          onClick={() => toggleOpened()}
+          onClick={() => toggle()}
           className={classes.burger}
           size="sm"
         />

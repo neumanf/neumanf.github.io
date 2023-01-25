@@ -9,6 +9,7 @@ export const projectsInfo = [
       "Authentication with JWT",
       "User dashboard",
       "CI/CD",
+      "Tests",
     ],
     liveLink: "https://mally.neumanf.com",
     sourceLink: "https://github.com/neumanf/mally",

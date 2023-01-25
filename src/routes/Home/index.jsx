@@ -1,8 +1,17 @@
-import { Button, Group, Image, Stack, Text, keyframes } from "@mantine/core";
+import {
+  Button,
+  Group,
+  Image,
+  Stack,
+  Text,
+  keyframes,
+  Container,
+} from "@mantine/core";
 import { useMediaQuery } from "@mantine/hooks";
 import { createStyles } from "@mantine/styles";
 import { Link } from "react-router-dom";
 import { BrandGithub, Mail } from "tabler-icons-react";
+import { ProjectsCarousel } from "../../components/ProjectsCarousel";
 
 const floating = keyframes({
   "0%": { transform: "translate(0,  0px)" },
@@ -35,7 +44,13 @@ export default function Home() {
       >
         <BrandGithub />
       </Button>
-      <Button variant="outline" color="dark" style={{ padding: "0 0.5em" }}>
+      <Button
+        component="a"
+        href="mailto:fabricionewman@gmail.com"
+        variant="outline"
+        color="dark"
+        style={{ padding: "0 0.5em" }}
+      >
         <Mail />
       </Button>
     </>
@@ -51,13 +66,18 @@ export default function Home() {
             </Text>{" "}
             & Computer Eng. Student
           </Text>
-          <Button component={Link} to="/projects">
-            Browse projects
-          </Button>
+          <Group>
+            <Button component="a" href="mailto:fabricionewman@gmail.com">
+              Contact me
+            </Button>
+            <Button component={Link} to="/projects" variant="outline">
+              Browse projects
+            </Button>
+          </Group>
         </Stack>
         <div className={classes.floating}>
           <Image
-            width={400}
+            width={isDesktop ? 400 : "100%"}
             src="/assets/images/hero.png"
             alt="Boy with laptop"
           />
@@ -68,6 +88,14 @@ export default function Home() {
           <Group>{getSocialMedia()}</Group>
         )}
       </Group>
+      <Container py={50} />
+      <Group position="apart" py={15}>
+        <Text weight="bold">Recent projects</Text>
+        <Text component="a" href="#/projects" color="red" size="sm">
+          See all
+        </Text>
+      </Group>
+      <ProjectsCarousel />
     </>
   );
 }
