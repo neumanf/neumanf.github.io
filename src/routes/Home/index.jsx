@@ -12,6 +12,7 @@ import { createStyles } from "@mantine/styles";
 import { Link } from "react-router-dom";
 import { BrandGithub, Mail } from "tabler-icons-react";
 import { ProjectsCarousel } from "../../components/ProjectsCarousel";
+import { useTranslation } from "react-i18next";
 
 const floating = keyframes({
   "0%": { transform: "translate(0,  0px)" },
@@ -21,7 +22,7 @@ const floating = keyframes({
 
 const useStyles = createStyles(() => ({
   heroTitle: {
-    fontSize: 36,
+    fontSize: 32,
   },
   floating: {
     animation: `${floating} 3s ease-in-out infinite`,
@@ -31,6 +32,7 @@ const useStyles = createStyles(() => ({
 export default function Home() {
   const { classes } = useStyles();
   const isDesktop = useMediaQuery("(min-width: 900px)");
+  const { t } = useTranslation();
 
   const getSocialMedia = () => (
     <>
@@ -62,16 +64,16 @@ export default function Home() {
         <Stack align="flex-start">
           <Text className={classes.heroTitle} weight="900">
             <Text className={classes.heroTitle} color="red">
-              Full-Stack Developer
+              {t("home.title.first")}
             </Text>{" "}
-            & Computer Eng. Student
+            {t("home.title.second")}
           </Text>
           <Group>
             <Button component="a" href="mailto:fabricionewman@gmail.com">
-              Contact me
+              {t("home.contact-me")}
             </Button>
             <Button component={Link} to="/projects" variant="outline">
-              Browse projects
+              {t("home.browse-projects")}
             </Button>
           </Group>
         </Stack>
@@ -90,9 +92,9 @@ export default function Home() {
       </Group>
       <Container py={50} />
       <Group position="apart" py={15}>
-        <Text weight="bold">Recent projects</Text>
+        <Text weight="bold">{t("home.recent-projects")}</Text>
         <Text component="a" href="#/projects" color="red" size="sm">
-          See all
+          {t("home.see-all")}
         </Text>
       </Group>
       <ProjectsCarousel />

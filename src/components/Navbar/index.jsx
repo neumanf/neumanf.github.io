@@ -11,6 +11,7 @@ import {
 } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 const HEADER_HEIGHT = 60;
 
@@ -89,7 +90,24 @@ const useStyles = createStyles((theme) => ({
   },
 }));
 
-export function Navbar({ links }) {
+export function Navbar() {
+  const { t } = useTranslation();
+  const links = [
+    {
+      link: "/",
+      label: t("navbar.home"),
+    },
+    {
+      link: "/projects",
+      label: t("navbar.projects"),
+    },
+    {
+      link: "https://neumanf.github.io/blog",
+      label: t("navbar.blog"),
+      isExternal: true,
+    },
+  ];
+
   const [opened, { toggle, close }] = useDisclosure(false);
   const [active, setActive] = useState(links[0].link);
   const { classes, cx } = useStyles();

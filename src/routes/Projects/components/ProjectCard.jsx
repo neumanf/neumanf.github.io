@@ -12,6 +12,7 @@ import {
   Container,
   ScrollArea,
 } from "@mantine/core";
+import { useTranslation } from "react-i18next";
 
 const useStyles = createStyles((theme) => ({
   card: {
@@ -46,6 +47,7 @@ export function ProjectCard({
 }) {
   const { classes } = useStyles();
   const theme = useMantineTheme();
+  const { t } = useTranslation();
 
   const features = badges.map((badge) => (
     <Badge color={theme.colorScheme === "dark" ? "dark" : "gray"} key={badge}>
@@ -85,7 +87,7 @@ export function ProjectCard({
             size="sm"
             mt="xs"
           >
-            Read more
+            {t("projects.read-more")}
           </Text>
         )}
       </Card.Section>
@@ -100,7 +102,7 @@ export function ProjectCard({
           style={{ flex: 1 }}
           target="_blank"
         >
-          Live
+          {t("projects.live")}
         </Button>
         <Button
           leftIcon={<BrandGithub size={18} />}
@@ -111,7 +113,7 @@ export function ProjectCard({
           style={{ flex: 1 }}
           target="_blank"
         >
-          Source
+          {t("projects.source")}
         </Button>
       </Group>
     </Card>

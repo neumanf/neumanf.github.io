@@ -1,23 +1,29 @@
 import { Container } from "@mantine/core";
 import { MantineProvider } from "@mantine/styles";
+import i18n from "i18next";
+import { initReactI18next } from "react-i18next";
 
 import { Navbar } from "./components/Navbar";
+import en from "./translations/en.json";
+import ptBr from "./translations/pt-br.json";
 
-const navBarLinks = [
-  {
-    link: "/",
-    label: "Home",
+i18n.use(initReactI18next).init({
+  resources: {
+    en: {
+      translation: en,
+    },
+    pt: {
+      translation: ptBr,
+    },
   },
-  {
-    link: "/projects",
-    label: "Projects",
+  lng: "pt",
+  fallbackLng: "en",
+  returnObjects: true,
+
+  interpolation: {
+    escapeValue: false,
   },
-  {
-    link: "https://neumanf.github.io/blog",
-    label: "Blog",
-    isExternal: true,
-  },
-];
+});
 
 export default function App({ child }) {
   return (
@@ -27,7 +33,7 @@ export default function App({ child }) {
         fontFamily: "Inter, sans-serif",
       }}
     >
-      <Navbar links={navBarLinks} />
+      <Navbar />
       <Container py="xl">{child}</Container>
     </MantineProvider>
   );

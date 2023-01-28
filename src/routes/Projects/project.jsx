@@ -11,21 +11,24 @@ import {
   Tooltip,
 } from "@mantine/core";
 import { BrandGithub, Eye } from "tabler-icons-react";
+import { useTranslation } from "react-i18next";
 
 export default function ProjectPage({
   project: { title, description, features, screenshots, liveLink, sourceLink },
 }) {
+  const { t } = useTranslation();
+
   return (
     <>
       <Group position="apart">
         <Title>{title}</Title>
         <Group>
-          <Tooltip label="See live">
+          <Tooltip label={t("projects.see-live")}>
             <ActionIcon component="a" color="red" href={liveLink}>
               <Eye />
             </ActionIcon>
           </Tooltip>
-          <Tooltip label="Source code">
+          <Tooltip label={t("projects.source-code")}>
             <ActionIcon component="a" color="red" href={sourceLink}>
               <BrandGithub />
             </ActionIcon>
@@ -38,7 +41,7 @@ export default function ProjectPage({
       {features && (
         <>
           <Text size="xl" weight="bold" py={5}>
-            Features
+            {t("projects.features")}
           </Text>
           <List>
             {features.map((feature, i) => (
@@ -51,7 +54,7 @@ export default function ProjectPage({
       {screenshots && (
         <>
           <Text size="xl" weight="bold">
-            Screenshots
+            {t("projects.screenshots")}
           </Text>
           {screenshots.map((s) => (
             <Card
