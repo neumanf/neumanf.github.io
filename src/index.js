@@ -5,6 +5,7 @@ import { HashRouter, Route, Routes } from "react-router-dom";
 import "./index.css";
 import reportWebVitals from "./reportWebVitals";
 import en from "./translations/en.json";
+import pt from "./translations/pt-br.json";
 
 import App from "./App";
 import Projects from "./routes/Projects";
@@ -19,13 +20,18 @@ root.render(
       <Routes>
         <Route path="/" element={<App child={<Home />} />}></Route>
         <Route path="/projects" element={<App child={<Projects />} />}></Route>
-        {en.projects.data.map((project) => (
-          <Route
-            key={project.pageLink}
-            path={project.pageLink}
-            element={<App child={<ProjectPage project={project} />} />}
-          />
-        ))}
+        {(() => {
+          const language = localStorage.getItem("language") || "en";
+          const projects =
+            language === "en" ? en.projects.data : pt.projects.data;
+          return projects.map((project) => (
+            <Route
+              key={project.pageLink}
+              path={project.pageLink}
+              element={<App child={<ProjectPage project={project} />} />}
+            />
+          ));
+        })()}
       </Routes>
     </HashRouter>
   </React.StrictMode>

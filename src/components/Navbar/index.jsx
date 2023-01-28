@@ -8,6 +8,7 @@ import {
   Paper,
   Transition,
   Text,
+  ActionIcon,
 } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
 import { Link } from "react-router-dom";
@@ -91,7 +92,10 @@ const useStyles = createStyles((theme) => ({
 }));
 
 export function Navbar() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const [language, setLanguage] = useState(
+    localStorage.getItem("language") || "en"
+  );
   const links = [
     {
       link: "/",
@@ -140,6 +144,13 @@ export function Navbar() {
     )
   );
 
+  const toggleLanguage = () => {
+    const languageToBeSet = language === "en" ? "pt" : "en";
+    i18n.changeLanguage(languageToBeSet);
+    setLanguage(languageToBeSet);
+    localStorage.setItem("language", languageToBeSet);
+  };
+
   return (
     <Header height={HEADER_HEIGHT} className={classes.root}>
       <Container className={classes.header}>
@@ -150,12 +161,18 @@ export function Navbar() {
           {items}
         </Group>
 
-        <Burger
-          opened={opened}
-          onClick={() => toggle()}
-          className={classes.burger}
-          size="sm"
-        />
+        <Group>
+          <ActionIcon variant="outline" onClick={toggleLanguage}>
+            {language === "en" ? "🇺🇸" : "🇧🇷"}
+          </ActionIcon>
+
+          <Burger
+            opened={opened}
+            onClick={() => toggle()}
+            className={classes.burger}
+            size="sm"
+          />
+        </Group>
 
         <Transition transition="pop-top-right" duration={200} mounted={opened}>
           {(styles) => (
