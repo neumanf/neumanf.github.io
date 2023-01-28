@@ -9,7 +9,7 @@ import {
   Card,
 } from "@mantine/core";
 import React from "react";
-import { projectsInfo } from "../../routes/Projects/projectsInfo";
+import { useTranslation } from "react-i18next";
 
 const useStyles = createStyles((theme) => ({
   card: {
@@ -37,6 +37,7 @@ const useStyles = createStyles((theme) => ({
 
 function ProjectCard({ image, description, title, pageLink }) {
   const { classes } = useStyles();
+  const { t } = useTranslation();
 
   return (
     <Card withBorder radius="md" p={0} className={classes.card}>
@@ -57,7 +58,7 @@ function ProjectCard({ image, description, title, pageLink }) {
             {description}
           </Text>
           <Text component="a" href={pageLink} color="red" size="sm">
-            Read more
+            {t("projects.read-more")}
           </Text>
         </div>
       </Group>
@@ -65,16 +66,19 @@ function ProjectCard({ image, description, title, pageLink }) {
   );
 }
 
-const data = projectsInfo.slice(0, 4).map((project, i) => ({
-  image: project.screenshots[0].link,
-  title: project.title,
-  description: project.description,
-  pageLink: "#" + project.pageLink,
-}));
-
 export function ProjectsCarousel() {
   const theme = useMantineTheme();
   const mobile = useMediaQuery(`(max-width: ${theme.breakpoints.sm}px)`);
+  const { t } = useTranslation();
+
+  const data = t("projects.data")
+    .slice(0, 4)
+    .map((project, i) => ({
+      image: project.screenshots[0].link,
+      title: project.title,
+      description: project.description,
+      pageLink: "#" + project.pageLink,
+    }));
 
   const slides = data.map((item) => (
     <Carousel.Slide key={item.title}>

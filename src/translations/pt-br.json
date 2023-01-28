@@ -1,0 +1,130 @@
+{
+  "home": {
+    "title": {
+      "first": "Desenvolvedor Full-Stack",
+      "second": "& Estudante de Computação"
+    },
+    "contact-me": "Entre em contato",
+    "browse-projects": "Ver projetos",
+    "recent-projects": "Projetos recentes",
+    "see-all": "Ver todos"
+  },
+  "navbar": {
+    "home": "Início",
+    "projects": "Projetos",
+    "blog": "Blog"
+  },
+  "projects": {
+    "read-more": "Ler mais",
+    "live": "Online",
+    "source": "Código fonte",
+    "features": "Recursos",
+    "screenshots": "Capturas de tela",
+    "see-live": "Ver online",
+    "source-code": "Código fonte",
+    "data": [
+      {
+        "title": "Mally",
+        "description": "Uma coleção de serviços web, como encurtadores de URL, pastebins e muito mais.",
+        "badges": ["TypeScript", "React", "NextJS", "NestJS", "MySQL"],
+        "features": [
+          "Serviços de encurtador de URL e Pastebin",
+          "Autenticação com JWT",
+          "Painel de usuário",
+          "CI/CD",
+          "Testes automatizados"
+        ],
+        "liveLink": "https://mally.neumanf.com",
+        "sourceLink": "https://github.com/neumanf/mally",
+        "pageLink": "/projects/mally",
+        "screenshots": [
+          {
+            "link": "/assets/images/mally.png",
+            "caption": "Tela inicial"
+          },
+          {
+            "link": "/assets/images/mally_url_shortener.png",
+            "caption": "Encurtador de URL"
+          },
+          {
+            "link": "/assets/images/mally_pastebin.png",
+            "caption": "Pastebin"
+          },
+          {
+            "link": "/assets/images/mally_dashboard.png",
+            "caption": "Painel"
+          }
+        ]
+      },
+      {
+        "title": "Vagas Tech RN Bot",
+        "description": "Posta vagas relacionadas a tecnologia no canal Vagas Tech RN no Telegram.",
+        "badges": ["TypeScript", "Express", "grammY", "MySQL"],
+        "liveLink": "https://t.me/s/vagastechrn",
+        "sourceLink": "https://github.com/neumanf/vagastechrnbot",
+        "pageLink": "/projects/vagastechrnbot",
+        "screenshots": [
+          {
+            "link": "/assets/images/vagastechrnbot.png",
+            "caption": "Canal Vagas Tech RN"
+          }
+        ]
+      },
+      {
+        "title": "Clean E-commerce",
+        "description": "E-commerce/E-shop capaz de listar, filtrar e encomendar produtos, assim como notificar usuários quando um produto estiver disponível.",
+        "badges": ["TypeScript", "React", "NextJS", "NestJS", "PostgreSQL"],
+        "sourceLink": "https://github.com/neumanf/clean-ecommerce",
+        "pageLink": "/projects/clean-ecommerce",
+        "screenshots": [
+          {
+            "link": "/assets/images/clean-ecommerce.png",
+            "caption": "Tela inicial"
+          }
+        ]
+      },
+      {
+        "title": "Image Deblur Tool",
+        "description": "Restaura imagens borradas utilizando o filtro de Wiener.",
+        "badges": ["OpenCV", "Python", "FastAPI", "React"],
+        "liveLink": "https://image-deblur-tool.vercel.app",
+        "sourceLink": "https://github.com/neumanf/image-deblur-tool",
+        "pageLink": "/projects/image-deblur-tool",
+        "screenshots": [
+          {
+            "link": "/assets/images/image-deblur-tool.png",
+            "caption": "Tela inicial"
+          }
+        ]
+      },
+      {
+        "title": "Unboreme",
+        "description": "Site de recomendação de filmes e séries de TV. Escolha uma ou mais categorias e ele recomendará algo com base nisso.",
+        "badges": ["TypeScript", "Svelte", "AdonisJS", "TailwindCSS"],
+        "liveLink": "https://unboreme.herokuapp.com",
+        "sourceLink": "https://github.com/neumanf/unboreme",
+        "pageLink": "/projects/unboreme",
+        "screenshots": [
+          {
+            "link": "/assets/images/unboreme.png",
+            "caption": "Tela inicial"
+          }
+        ]
+      },
+      {
+        "title": "PDI",
+        "description": "Blog que inclui os projetos da disciplina de Processamento Digital de Imagens.",
+        "badges": ["C++", "OpenCV"],
+        "liveLink": "https://neumanf.github.io/pdi",
+        "sourceLink": "https://github.com/neumanf/pdi",
+        "pageLink": "/projects/pdi",
+        "screenshots": [
+          {
+            "link": "/assets/images/pdi.png",
+            "caption": "Tela inicial"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,12 +1,15 @@
 import { Grid } from "@mantine/core";
+import { useTranslation } from "react-i18next";
 
 import { ProjectCard } from "./components/ProjectCard";
-import { projectsInfo } from "./projectsInfo";
 
 export default function Projects() {
+  const { t } = useTranslation();
+  const projects = t("projects.data");
+
   return (
     <Grid>
-      {projectsInfo.map((project) => (
+      {projects.map((project) => (
         <Grid.Col key={project.title} md={4} lg={4}>
           <ProjectCard
             image={project.screenshots[0].link}
