@@ -71,6 +71,19 @@
         ]
       },
       {
+        "title": "Mally CLI",
+        "description": "A CLI tool for creating short URLs and pastes directly from your terminal.",
+        "badges": ["Go"],
+        "sourceLink": "https://github.com/neumanf/mally-cli",
+        "pageLink": "/projects/mally-cli",
+        "screenshots": [
+          {
+            "link": "/assets/images/mally-cli.png",
+            "caption": "Demo"
+          }
+        ]
+      },
+      {
         "title": "Clean E-commerce",
         "description": "E-commerce/E-shop website capable of list, filter and order products, as well as notify users when a product is unavailable.",
         "badges": ["TypeScript", "React", "NextJS", "NestJS", "PostgreSQL"],

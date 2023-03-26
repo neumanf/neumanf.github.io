@@ -71,6 +71,19 @@
         ]
       },
       {
+        "title": "Mally CLI",
+        "description": "Ferramenta de linha de comando para criar URLs encurtadas e pastes diretamente do terminal.",
+        "badges": ["Go"],
+        "sourceLink": "https://github.com/neumanf/mally-cli",
+        "pageLink": "/projects/mally-cli",
+        "screenshots": [
+          {
+            "link": "/assets/images/mally-cli.png",
+            "caption": "Demo"
+          }
+        ]
+      },
+      {
         "title": "Clean E-commerce",
         "description": "E-commerce/E-shop capaz de listar, filtrar e encomendar produtos, assim como notificar usuários quando um produto estiver disponível.",
         "badges": ["TypeScript", "React", "NextJS", "NestJS", "PostgreSQL"],
