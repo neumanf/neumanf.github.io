@@ -1,0 +1,41 @@
+---
+import { projectsList } from "../../constants/projects";
+import Layout from "../../layouts/Layout.astro";
+import DoubleBadge from "../../components/DoubleBadge.astro";
+
+export function getStaticPaths() {
+  return projectsList.map((project) => ({
+    params: { project: project.path },
+  }));
+}
+
+const { project: projectId } = Astro.params;
+const project = projectsList.find((p) => p.path === projectId);
+---
+
+<Layout title={"Projects - " + project?.name + " - Neuman F."}>
+  <div class="font-bold text-4xl">{project?.name}</div>
+
+  <div class="text-xl my-4">{project?.description}</div>
+
+  <div class="flex flex-col md:flex-row gap-2">
+    {
+      project?.liveUrl && (
+        <DoubleBadge title="Website" text={project?.liveUrl} isUrl={true} />
+      )
+    }
+    <DoubleBadge title="Platform" text={project?.platform} />
+    <DoubleBadge title="Stack" text={project?.stack} />
+  </div>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 mt-10 gap-4">
+    {
+      project?.images.map((image) => (
+        <div class="flex flex-col items-center">
+          <img class="rounded-lg mb-2" src={image.url} />
+          <p>{image.description}</p>
+        </div>
+      ))
+    }
+  </div>
+</Layout>
