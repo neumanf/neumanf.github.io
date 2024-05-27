@@ -1,0 +1,52 @@
+---
+import "@tabler/icons-webfont/dist/tabler-icons.min.css";
+
+import { socialsList } from "../constants/socials";
+import { techStackList } from "../constants/techStack";
+---
+
+<section id="cta">
+  <div class="flex justify-between">
+    <div>
+      <p class="font-bold text-4xl">Neuman Fabrício</p>
+      <p class="font-semibold text-gray-300 text-xl">Back-end Developer</p>
+    </div>
+    <div>
+      {
+        socialsList.map((item) => (
+          <a
+            class="flex align-center bg-neutral-900 hover:bg-neutral-800 rounded-full p-2"
+            href={item.url}
+          >
+            <i class:list={["ti", `ti-${item.icon}`, "text-xl"]} />
+          </a>
+        ))
+      }
+    </div>
+  </div>
+
+  <div class="mt-4">
+    {
+      techStackList.map((item) => (
+        <div class="inline-flex items-center bg-neutral-900 font-semibold px-3 py-2 rounded-full mr-2">
+          <>
+            <i class:list={["ti", `ti-${item.icon}`, "text-xl", item.color]} />
+            <span class="mx-1">{item.name}</span>
+          </>
+        </div>
+      ))
+    }
+  </div>
+
+  <div class="flex items-center mt-10 gap-4">
+    <a
+      class="bg-teal-500 text-white p-3 rounded-lg font-semibold hover:bg-teal-400"
+      href="mailto:fabricionewman@gmail.com">Contact me</a
+    >
+    <a class="font-semibold hover:text-gray-200" href="#projetos"
+      >Browse projects</a
+    >
+  </div>
+</section>
+
+<style></style>

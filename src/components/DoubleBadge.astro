@@ -1,0 +1,28 @@
+---
+interface Props {
+  title?: string;
+  text?: string;
+  isUrl?: boolean;
+}
+
+const { title, text, isUrl } = Astro.props;
+---
+
+<div class="inline-flex items-center rounded-full bg-neutral-900">
+  <span class="inline-flex py-2 px-3 rounded-full bg-teal-500 font-semibold"
+    >{title}</span
+  >
+  {
+    isUrl ? (
+      <a
+        href={"https://" + text}
+        class="pl-3 pr-5 text-teal-500"
+        target="_blank"
+      >
+        {text}
+      </a>
+    ) : (
+      <span class="pl-3 pr-5">{text}</span>
+    )
+  }
+</div>
