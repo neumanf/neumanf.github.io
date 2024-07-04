@@ -1,0 +1,17 @@
+---
+interface Props {
+  icon: string;
+  title: string;
+}
+
+const { title, icon } = Astro.props;
+---
+
+<div
+  class="inline-flex items-center bg-slate-900 font-semibold px-3 py-2 rounded-full mr-2"
+>
+  <>
+    <i class:list={["ti", `ti-${icon}`, "text-xl", "text-slate-400"]}></i>
+    <span class="mx-1">{title}</span>
+  </>
+</div>

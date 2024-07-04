@@ -1,0 +1,36 @@
+---
+import type { ProjectItem } from "../constants/projects";
+import ButtonWithTooltip from "../components/ButtonWithTooltip.astro";
+
+interface Props {
+  project: ProjectItem;
+}
+
+const { project } = Astro.props;
+---
+
+<div
+  class="inline-flex flex-col justify-between align-centerpx-4 bg-slate-900 rounded-lg py-4 px-3 border border-slate-700"
+>
+  <div class="flex flex-col">
+    <img class="rounded-lg" src={project.images.at(0)?.url} width="400" />
+    <span class="font-semibold mt-2 text-xl">{project.name}</span>
+    <span class="text-slate-400 mt-2">{project.description}</span>
+  </div>
+  <div class="flex justify-between mt-2">
+    <a
+      class="font-medium hover:text-slate-300"
+      href={"/projects/" + project.path}
+    >
+      Read more
+    </a>
+    <div>
+      <ButtonWithTooltip
+        title="Open website"
+        icon="external-link"
+        url={"https://" + project.liveUrl}
+        bgColor="bg-slate-950 hover:bg-slate-800"
+      />
+    </div>
+  </div>
+</div>

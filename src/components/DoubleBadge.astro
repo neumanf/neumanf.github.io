@@ -8,15 +8,15 @@ interface Props {
 const { title, text, isUrl } = Astro.props;
 ---
 
-<div class="inline-flex items-center rounded-full bg-neutral-900">
-  <span class="inline-flex py-2 px-3 rounded-full bg-teal-500 font-semibold"
+<div class="inline-flex items-center rounded-full bg-slate-900">
+  <span class="inline-flex py-2 px-3 rounded-full bg-red-500 font-semibold"
     >{title}</span
   >
   {
     isUrl ? (
       <a
         href={"https://" + text}
-        class="pl-3 pr-5 text-teal-500"
+        class="pl-3 pr-5 text-red-400"
         target="_blank"
       >
         {text}

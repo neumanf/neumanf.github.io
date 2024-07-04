@@ -23,14 +23,16 @@ const navbarLinks = [
     <meta charset="UTF-8" />
     <meta name="description" content="Astro description" />
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="icon" type="image/svg" href="/assets/images/NF-logo.svg" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>
   <body class="container mx-auto py-6">
     <div class="flex justify-between">
       <div>
-        <a href="/" class="font-bold text-xl">NF</a>
+        <a href="/" class="font-bold text-xl"
+          ><img src="/assets/images/NF-logo.svg" width="30" /></a
+        >
       </div>
       <div>
         <ul class="flex gap-10">
@@ -48,9 +50,16 @@ const navbarLinks = [
     <div class="py-24">
       <slot />
     </div>
+
+    <script
+      is:inline
+      src="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.js"
+    ></script>
   </body>
 </html>
 <style is:global>
+  @import url("https://fonts.googleapis.com/css?family=DM+Sans&display=swap");
+
   :root {
     --accent: 136, 58, 234;
     --accent-light: 224, 204, 250;
@@ -63,10 +72,11 @@ const navbarLinks = [
     );
   }
   html {
-    font-family: system-ui, sans-serif;
-    background: #28262c;
+    font-family: "DM Sans", sans-serif;
+    background: #060817;
     color: white;
     background-size: 224px;
+    padding: 0 3em;
   }
   code {
     font-family:

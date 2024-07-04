@@ -1,24 +1,14 @@
 ---
 import "@tabler/icons-webfont/dist/tabler-icons.min.css";
 import { projectsList } from "../constants/projects";
+import ProjectCard from "./ProjectCard.astro";
 ---
 
 <section id="projects">
-  <p class="font-bold text-3xl mb-4">Projects</p>
+  <p class="font-semibold text-2xl mb-6">Projects</p>
 
-  <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
-    {
-      projectsList.map((project) => (
-        <a
-          class="inline-flex flex-col align-centerpx-4 py-3 rounded-lg"
-          href={"/projects/" + project.path}
-        >
-          <img src={project.images.at(0)?.url} width="400" />
-          <span class="font-semibold mt-2 text-xl">{project.name}</span>
-          <span class="mt-2">{project.description}</span>
-        </a>
-      ))
-    }
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+    {projectsList.map((project) => <ProjectCard project={project} />)}
   </div>
 </section>
 
