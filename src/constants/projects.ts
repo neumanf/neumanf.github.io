@@ -5,7 +5,7 @@ export type ProjectItem = {
     sourceUrl: string;
     liveUrl: string;
     platform: string;
-    stack: string;
+    stack: { id: string, description: string }[];
     images: { url: string, description: string }[]
 };
 
@@ -17,7 +17,14 @@ export const projectsList: ProjectItem[] = [
         sourceUrl: "https://github.com/neumanf/mally",
         liveUrl: "mally.neumanf.com",
         platform: "Web",
-        stack: "Typescript, Java, Angular, Springboot, RabbitMQ, PostgreSQL",
+        stack: [
+            { id: "typescript", description: 'Frontend programming language' },
+            { id: "java", description: 'Backend programming language' },
+            { id: "angular", description: 'UI framework' },
+            { id: "spring", description: 'API framework' },
+            { id: "rabbitmq", description: 'Message broker' },
+            { id: "postgresql", description: 'SQL database' },
+        ],
         images: [
             {
                 url: "/assets/images/mally-1.png",
@@ -40,7 +47,12 @@ export const projectsList: ProjectItem[] = [
         sourceUrl: "https://github.com/neumanf/docbuddy",
         liveUrl: "github.com/neumanf/docbuddy",
         platform: "Windows and Linux",
-        stack: "Rust, TypeScript, Tauri, Vue.js",
+        stack: [
+            { id: "typescript", description: 'Frontend programming language' },
+            { id: "rust", description: 'Backend programming language' },
+            { id: "tauri", description: 'Crossplatform desktop toolkit' },
+            { id: "vue", description: 'UI framework' },
+        ],
         images: [
             {
                 url: "/assets/images/docbuddy-1.png",
@@ -63,7 +75,11 @@ export const projectsList: ProjectItem[] = [
         sourceUrl: "https://github.com/neumanf/vagastechrnbot",
         liveUrl: "t.me/s/vagastechrn",
         platform: "Telegram",
-        stack: "Typescript, grammY, MySQL",
+        stack: [
+            { id: "typescript", description: 'Programming language' },
+            { id: "grammy", description: 'Telegram bot framework' },
+            { id: "mysql", description: 'SQL database' },
+        ],
         images: [
             {
                 url: "/assets/images/vagastechrnbot.png",
@@ -78,7 +94,16 @@ export const projectsList: ProjectItem[] = [
         sourceUrl: "https://github.com/henshiapp/henshi",
         liveUrl: "github.com/henshiapp/henshi",
         platform: "Web",
-        stack: "TypeScript, Nest.js, Vue.js, RabbitMQ, gRPC, PostgreSQL, Redis, Kubernetes",
+        stack: [
+            { id: "typescript", description: 'Programming language' },
+            { id: "nest", description: 'Backend framework' },
+            { id: "vue", description: 'Frontend framework' },
+            { id: "rabbitmq", description: 'Message broker' },
+            { id: "grpc", description: 'Service intercommunication' },
+            { id: "postgresql", description: 'SQL database' },
+            { id: "redis", description: 'Cache' },
+            { id: "kubernetes", description: 'Container orchestration' },
+        ],
         images: [
             {
                 url: "/assets/images/henshi-1.png",

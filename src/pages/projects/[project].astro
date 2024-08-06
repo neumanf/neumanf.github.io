@@ -1,7 +1,8 @@
 ---
 import { projectsList } from "../../constants/projects";
 import Layout from "../../layouts/Layout.astro";
-import DoubleBadge from "../../components/DoubleBadge.astro";
+import ButtonLink from "../../components/ButtonLink.astro";
+import ButtonWithTooltip from "../../components/ButtonWithTooltip.astro";
 
 export function getStaticPaths() {
   return projectsList.map((project) => ({
@@ -14,28 +15,64 @@ const project = projectsList.find((p) => p.path === projectId);
 ---
 
 <Layout title={"Projects - " + project?.name + " - Neuman F."}>
-  <div class="font-bold text-4xl">{project?.name}</div>
+  <div class="flex justify-between">
+    <div class="font-bold text-4xl">{project?.name}</div>
 
-  <div class="text-xl my-4">{project?.description}</div>
-
-  <div class="flex flex-col md:flex-row gap-2">
-    {
-      project?.liveUrl && (
-        <DoubleBadge title="Website" text={project?.liveUrl} isUrl={true} />
-      )
-    }
-    <DoubleBadge title="Platform" text={project?.platform} />
-    <DoubleBadge title="Stack" text={project?.stack} />
+    <div class="flex gap-2">
+      {
+        !!project?.liveUrl && (
+          <ButtonWithTooltip
+            title="Open website"
+            icon="external-link"
+            url={"https://" + project?.liveUrl}
+          />
+        )
+      }
+      {
+        !!project?.sourceUrl && (
+          <ButtonWithTooltip
+            icon="brand-github"
+            title="Source"
+            url={project!.sourceUrl}
+          />
+        )
+      }
+    </div>
   </div>
 
-  <div class="grid grid-cols-1 md:grid-cols-2 mt-10 gap-4">
-    {
-      project?.images.map((image) => (
-        <div class="flex flex-col items-center">
-          <img class="rounded-lg mb-2" src={image.url} />
-          <p>{image.description}</p>
-        </div>
-      ))
-    }
-  </div>
+  <div class="text-xl my-4 text-slate-400">{project?.description}</div>
+
+  <section id="stack" class="mt-10">
+    <h3 class="font-bold text-xl mb-5">
+      <span class="text-slate-400">#</span> Stack
+    </h3>
+
+    <ul>
+      {
+        project?.stack.map(({ id, description }) => (
+          <li class="flex items-center">
+            <ButtonLink id={id} /> -{" "}
+            <span class="text-slate-400 ml-3">{description}</span>
+          </li>
+        ))
+      }
+    </ul>
+  </section>
+
+  <section id="screenshots" class="mt-10">
+    <h3 class="font-bold text-xl mb-5">
+      <span class="text-slate-400">#</span> Screenshots
+    </h3>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+      {
+        project?.images.map((image) => (
+          <div class="flex flex-col items-center">
+            <img class="rounded-lg mb-2" src={image.url} />
+            <p>{image.description}</p>
+          </div>
+        ))
+      }
+    </div>
+  </section>
 </Layout>

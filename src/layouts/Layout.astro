@@ -1,4 +1,6 @@
 ---
+import "@tabler/icons-webfont/dist/tabler-icons.min.css";
+
 interface Props {
   title: string;
 }
@@ -28,7 +30,10 @@ const navbarLinks = [
     <title>{title}</title>
   </head>
   <body class="container mx-auto py-6">
-    <div class="flex justify-between">
+    <div
+      class="flex justify-between sticky top-0 backdrop-blur py-4"
+      style="z-index: 1"
+    >
       <div>
         <a href="/" class="font-bold text-xl"
           ><img src="/assets/images/NF-logo.svg" width="30" /></a

@@ -1,0 +1,136 @@
+---
+interface Props {
+  id: string;
+}
+
+const { id } = Astro.props;
+
+const buttons: Record<
+  string,
+  { name: string; icon: string; url: string; color: string }
+> = {
+  typescript: {
+    name: "TypeScript",
+    icon: "brand-typescript",
+    color: "blue-400",
+    url: "https://www.typescriptlang.org/",
+  },
+  java: {
+    name: "Java",
+    icon: "coffee",
+    color: "orange-400",
+    url: "https://www.java.com/",
+  },
+  rust: {
+    name: "Rust",
+    icon: "brand-rust",
+    color: "orange-400",
+    url: "https://rustlang.org/",
+  },
+  angular: {
+    name: "Angular",
+    icon: "brand-angular",
+    color: "red-400",
+    url: "https://angular.dev/",
+  },
+  tauri: {
+    name: "Tauri",
+    icon: "device-desktop-code",
+    color: "yellow-400",
+    url: "https://tauri.app/",
+  },
+  vue: {
+    name: "Vue",
+    icon: "brand-vue",
+    color: "green-400",
+    url: "https://vuejs.org/",
+  },
+  nest: {
+    name: "NestJS",
+    icon: "cat",
+    color: "red-400",
+    url: "https://nestjs.org/",
+  },
+  spring: {
+    name: "Spring",
+    icon: "brand-gravatar",
+    color: "green-400",
+    url: "https://spring.io/",
+  },
+  rabbitmq: {
+    name: "RabbitMQ",
+    icon: "carrot",
+    color: "orange-500",
+    url: "https://www.rabbitmq.com/",
+  },
+  grammy: {
+    name: "grammY",
+    icon: "message-chatbot",
+    color: "cyan-400",
+    url: "https://grammy.dev/",
+  },
+  postgresql: {
+    name: "PostgreSQL",
+    icon: "database",
+    color: "blue-500",
+    url: "https://www.postgresql.org/",
+  },
+  mysql: {
+    name: "MySQL",
+    icon: "database",
+    color: "blue-500",
+    url: "https://www.mysql.com/",
+  },
+  redis: {
+    name: "Redis",
+    icon: "registered",
+    color: "red-500",
+    url: "https://redis.io/",
+  },
+  grpc: {
+    name: "gRPC",
+    icon: "arrows-exchange",
+    color: "cyan-800",
+    url: "https://grpc.io/",
+  },
+  kubernetes: {
+    name: "Kubernetes",
+    icon: "ship",
+    color: "blue-400",
+    url: "https://kubernetes.io/",
+  },
+};
+const { name, icon, color, url } = buttons[id];
+---
+
+<a class="inline-flex items-center" href={url} target="_blank">
+  <i class:list={["ti", `ti-${icon}`, "text-xl", `text-${color}`]}></i>
+  <span class="ml-2">{name}</span>
+</a>
+
+<style>
+  a {
+    color: #fff;
+    text-decoration: none;
+    padding: 15px 20px;
+    position: relative;
+  }
+  a:after {
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    background: #fff;
+    transition:
+      width 0.3s ease 0s,
+      left 0.3s ease 0s;
+    width: 0;
+  }
+  a:hover:after {
+    width: 100%;
+    left: 0;
+  }
+</style>
